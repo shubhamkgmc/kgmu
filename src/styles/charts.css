@@ -6,7 +6,7 @@
 
 .bar-track { background: var(--line); height: 14px; border-radius: 7px; overflow: hidden; }
 
-.bar-fill { display: block; height: 100%; background: var(--teal); border-radius: 7px; animation: grow .8s ease; transform-origin: left; }
+.bar-fill { display: block; height: 100%; background: var(--primary); border-radius: 7px; animation: grow .8s ease; transform-origin: left; }
 
 @keyframes grow { from { transform: scaleX(0); } }
 

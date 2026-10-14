@@ -12,9 +12,9 @@ h2 { font-size: 1.6rem; margin: 0 0 1rem; }
 
 h3 { font-size: 1.1rem; margin: 2rem 0 .75rem; }
 
-a { color: var(--teal); }
+a { color: var(--primary); }
 
-:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
 

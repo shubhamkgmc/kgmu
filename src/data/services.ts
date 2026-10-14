@@ -28,7 +28,7 @@ export const services: Service[] = [
     id: "callcenter",
     name: "Call centre",
     icon: "📞",
-    tone: "indigo",
+    tone: "teal",
     featured: true,
     badge: "Helpline for patients and staff",
     summary:
@@ -157,7 +157,7 @@ export const services: Service[] = [
     id: "samarth",
     name: "Samarth",
     icon: "🎓",
-    tone: "indigo",
+    tone: "teal",
     featured: true,
     badge: "University administration",
     summary: "The Samarth portal handles university administration for students and faculty.",

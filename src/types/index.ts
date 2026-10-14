@@ -26,14 +26,14 @@ export interface LifecycleStep {
   icon: string;
 }
 
-export type Tone = "indigo" | "violet" | "green" | "amber" | "rose";
+export type Tone = "teal" | "violet" | "green" | "amber" | "rose";
 
 export interface Service {
   id: string;
   name: string;
   /** Emoji shown on the tab and in the banner. */
   icon: string;
-  /** Banner colour; leave out for the default teal-blue. */
+  /** Banner colour; leave out for the default KGMU navy blue. */
   tone?: Tone;
   summary: string;
   stats?: StatItem[];

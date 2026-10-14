@@ -2,7 +2,7 @@
 
 .hero { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; align-items: center; padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 5vw, 4rem); }
 
-.hero { background-color: #12303a; background-size: cover; background-position: center; color: #fff; min-height: 460px; }
+.hero { background-color: #14284f; background-size: cover; background-position: center; color: #fff; min-height: 460px; }
 
 .hero p { max-width: 60ch; color: #dbe6ea; }
 

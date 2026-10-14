@@ -1,11 +1,11 @@
 /* Website update cards */
 
 .updates { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1rem; }
-.update { --c: var(--teal); display: flex; align-items: center; gap: 1rem; padding: 1rem 1.2rem; background: var(--card); border: 1px solid var(--line); border-left: 6px solid var(--c); border-radius: 12px; transition: transform .25s ease, box-shadow .25s ease; animation: rise .5s ease both; animation-delay: calc(var(--i) * 70ms); }
+.update { --c: var(--primary); display: flex; align-items: center; gap: 1rem; padding: 1rem 1.2rem; background: var(--card); border: 1px solid var(--line); border-left: 6px solid var(--c); border-radius: 12px; transition: transform .25s ease, box-shadow .25s ease; animation: rise .5s ease both; animation-delay: calc(var(--i) * 70ms); }
 .update:hover { transform: translateX(6px); box-shadow: 0 8px 18px rgba(0, 0, 0, .12); }
-.update:nth-child(2) { --c: #d99a00; }
-.update:nth-child(3) { --c: #c8553d; }
-.update:nth-child(4) { --c: #3b6ea5; }
+.update:nth-child(2) { --c: #b8902e; }
+.update:nth-child(3) { --c: #b82030; }
+.update:nth-child(4) { --c: #2f8f8f; }
 .update:nth-child(5) { --c: #7a5aa6; }
 .update:nth-child(6) { --c: #2f9e6e; }
 .update-icon { flex: 0 0 52px; width: 52px; height: 52px; display: grid; place-items: center; font-size: 1.6rem; border-radius: 14px; background: color-mix(in srgb, var(--c) 18%, transparent); }

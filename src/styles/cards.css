@@ -8,7 +8,7 @@
 
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 1rem 1.2rem; }
 
-.card h3 { margin: 0 0 .3rem; color: var(--teal); }
+.card h3 { margin: 0 0 .3rem; color: var(--primary); }
 
 .card p { margin: 0; color: var(--muted); }
 
@@ -16,16 +16,16 @@
 
 .card-head { all: unset; box-sizing: border-box; display: flex; justify-content: space-between; gap: 1rem; width: 100%; padding: 1rem 1.2rem; cursor: pointer; }
 
-.card-head:focus-visible { outline: 3px solid var(--amber); outline-offset: -3px; border-radius: 8px; }
+.card-head:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; border-radius: 8px; }
 
-.card-head h3 { margin: 0 0 .3rem; color: var(--teal); }
+.card-head h3 { margin: 0 0 .3rem; color: var(--primary); }
 
 .card-head p { margin: 0; color: var(--muted); }
 
-.chev { display: grid; place-items: center; flex: 0 0 30px; width: 30px; height: 30px; align-self: flex-start; color: var(--teal); }
+.chev { display: grid; place-items: center; flex: 0 0 30px; width: 30px; height: 30px; align-self: flex-start; color: var(--primary); }
 
 .card { transition: box-shadow .3s ease, border-color .3s ease; }
-.card.open { box-shadow: 0 8px 22px rgba(0, 0, 0, .1); border-color: var(--teal); }
+.card.open { box-shadow: 0 8px 22px rgba(0, 0, 0, .1); border-color: var(--primary); }
 .chev { transition: transform .35s ease; }
 .card.open .chev { transform: rotate(180deg); }
 
@@ -43,4 +43,4 @@
 
 .card-more li { margin-bottom: .3rem; }
 
-.card-link { display: inline-block; background: var(--teal); color: #fff; padding: .4rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; }
+.card-link { display: inline-block; background: var(--primary); color: #fff; padding: .4rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; }

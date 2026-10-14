@@ -2,4 +2,4 @@
 
 .block { padding: 3rem clamp(1rem, 5vw, 4rem); }
 
-.alt { background: var(--teal-soft); }
+.alt { background: var(--primary-soft); }
