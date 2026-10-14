@@ -1,0 +1,27 @@
+/* A4 / PDF print layout */
+
+@media print {
+  @page { size: A4; margin: 10mm; }
+  :root { --paper: #f6f7f4; --card: #fff; --ink: #15222e; --muted: #5b6a76; --line: #d8dedb; --teal: #0b6e6e; --teal-soft: #dcefee; --amber: #d99a00; --ok: #1c7a4a; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; animation: none !important; }
+  html, body { background: #fff !important; font-size: 12px; }
+  .no-print, .top nav, .screen-only { display: none !important; }
+  .print-only { display: block !important; }
+  .top { position: static; box-shadow: none; padding: .6rem 1rem; }
+  .hero { min-height: 0; padding: 1.2rem 1rem; gap: 1rem; }
+  .hero h1 { font-size: 1.8rem; }
+  .block { padding: 1rem; }
+  .stats { grid-template-columns: repeat(4, 1fr); gap: .5rem; }
+  .stat-num { font-size: 1.5rem; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .print-svc, .stat, .card, tr, .chips li, .foot { break-inside: avoid; }
+  .foot { padding: 1rem; grid-template-columns: 1.4fr 1fr; background: #15222e !important; color: #fff !important; }
+}
+
+@media print { .viz { grid-template-columns: 1.3fr 1fr; } .pie-svg { width: 130px; height: 130px; } }
+
+@media print { .card-more { grid-template-rows: 1fr !important; } .card-more-inner { visibility: visible !important; } .card-more-body { opacity: 1 !important; transform: none !important; } .chev { display: none; } .card-link { background: none; color: var(--teal); padding: 0; text-decoration: underline; } }
+
+@media print { .member, .team-group { break-inside: avoid; } .members { grid-template-columns: repeat(3, 1fr); } }
+
+@media print { .module, .task-group, .banner { break-inside: avoid; } .modules { grid-template-columns: repeat(4, 1fr); } }

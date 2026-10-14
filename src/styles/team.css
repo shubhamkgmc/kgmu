@@ -1,0 +1,15 @@
+/* Team section */
+
+.team-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.team-group { background: var(--teal-soft); border-radius: 8px; padding: 1rem 1.2rem; }
+.team-group h3 { margin: 0 0 .3rem; color: var(--teal); }
+.team-group p { margin: 0; color: var(--muted); }
+.members-title { margin-top: 2rem; }
+.members { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1rem; }
+.member { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 1.2rem; text-align: center; }
+.member h3 { margin: .7rem 0 .2rem; font-size: 1.1rem; }
+.avatar { width: 64px; height: 64px; margin: 0 auto; border-radius: 50%; display: grid; place-items: center; background: var(--teal); color: #fff; font: 700 1.3rem "Familjen Grotesk", sans-serif; }
+.member p { margin: 0; }
+.member-role { color: var(--muted); }
+.member-group { color: var(--teal); font-weight: 600; font-size: .9rem; }
+.member-contact { margin-top: .6rem; display: grid; gap: .1rem; font-size: .9rem; overflow-wrap: anywhere; }

@@ -1,0 +1,20 @@
+/* Colour tokens (light and dark) */
+
+:root {
+  --paper: #f6f7f4;
+  --card: #ffffff;
+  --ink: #15222e;
+  --muted: #5b6a76;
+  --line: #d8dedb;
+  --teal: #0b6e6e;
+  --teal-soft: #dcefee;
+  --amber: #d99a00;
+  --ok: #1c7a4a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0f1a22; --card: #162532; --ink: #e8eef2; --muted: #9bacb8;
+    --line: #264050; --teal: #4fc3bf; --teal-soft: #17343a; --amber: #f0b429; --ok: #5fd39a;
+  }
+}

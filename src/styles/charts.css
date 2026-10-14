@@ -1,0 +1,25 @@
+/* Bar and pie charts */
+
+.bars { list-style: none; padding: 0; margin: 0; display: grid; gap: .6rem; max-width: 760px; }
+
+.bars li { display: grid; grid-template-columns: 170px 1fr 70px; gap: .8rem; align-items: center; }
+
+.bar-track { background: var(--line); height: 14px; border-radius: 7px; overflow: hidden; }
+
+.bar-fill { display: block; height: 100%; background: var(--teal); border-radius: 7px; animation: grow .8s ease; transform-origin: left; }
+
+@keyframes grow { from { transform: scaleX(0); } }
+
+.bar-val { text-align: right; font-variant-numeric: tabular-nums; }
+
+.viz { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 2rem; align-items: center; }
+
+.pie { display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; }
+
+.pie-svg { width: 170px; height: 170px; border-radius: 50%; background: var(--line); }
+
+.pie-legend { list-style: none; padding: 0; margin: 0; display: grid; gap: .4rem; flex: 1; min-width: 180px; }
+
+.pie-legend li { display: grid; grid-template-columns: 14px 1fr auto; gap: .6rem; align-items: center; }
+
+.pie-legend i { width: 14px; height: 14px; border-radius: 3px; }

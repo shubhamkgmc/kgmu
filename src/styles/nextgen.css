@@ -1,0 +1,30 @@
+/* NextGen eHospital panel: banner, module tiles, work groups */
+
+.banner { position: relative; overflow: hidden; border-radius: 14px; padding: 1.6rem 1.8rem; margin-bottom: 1.2rem; color: #fff; background: linear-gradient(120deg, #073b4c 0%, #0b6e6e 55%, #3b6ea5 100%); }
+.banner::before, .banner::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; }
+.banner::before { width: 260px; height: 260px; right: -60px; top: -90px; background: radial-gradient(circle, rgba(240, 180, 41, .55), transparent 70%); animation: drift 9s ease-in-out infinite alternate; }
+.banner::after { width: 200px; height: 200px; right: 140px; bottom: -110px; background: radial-gradient(circle, rgba(255, 255, 255, .25), transparent 70%); animation: drift 12s ease-in-out infinite alternate-reverse; }
+.banner p { position: relative; z-index: 1; max-width: 62ch; margin: .8rem 0 0; font-size: 1.1rem; color: #eaf6f6; }
+.badge { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: .5rem; padding: .25rem .85rem; border-radius: 999px; font-weight: 600; font-size: .9rem; background: rgba(255, 255, 255, .16); border: 1px solid rgba(255, 255, 255, .35); }
+.badge::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #7be0a8; animation: pulse 2s infinite; }
+@keyframes drift { to { transform: translate(-30px, 20px) scale(1.15); } }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(123, 224, 168, .7); } 70%, 100% { box-shadow: 0 0 0 8px rgba(123, 224, 168, 0); } }
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+
+.modules { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: .8rem; }
+.module { display: flex; align-items: center; gap: .7rem; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: .8rem 1rem; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; animation: rise .5s ease both; animation-delay: calc(var(--i) * 45ms); }
+.module:hover { transform: translateY(-4px); border-color: var(--teal); box-shadow: 0 8px 18px rgba(0, 0, 0, .12); }
+.module-icon { flex: 0 0 42px; width: 42px; height: 42px; display: grid; place-items: center; font-size: 1.4rem; border-radius: 10px; background: var(--teal-soft); }
+.module-name { font-weight: 600; line-height: 1.25; }
+
+.task-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+.task-group { --c: var(--teal); background: var(--card); border: 1px solid var(--line); border-top: 5px solid var(--c); border-radius: 12px; padding: 1rem 1.2rem; animation: rise .5s ease both; animation-delay: calc(var(--i) * 80ms); }
+.task-group:nth-child(2) { --c: #d99a00; }
+.task-group:nth-child(3) { --c: #c8553d; }
+.task-group:nth-child(4) { --c: #3b6ea5; }
+.task-group:nth-child(5) { --c: #7a5aa6; }
+.task-group h4 { display: flex; align-items: center; gap: .6rem; margin: 0 0 .7rem; font: 700 1.05rem "Familjen Grotesk", sans-serif; }
+.task-icon { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: color-mix(in srgb, var(--c) 18%, transparent); }
+.task-group ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .45rem; }
+.task-group li { position: relative; padding-left: 1.4rem; }
+.task-group li::before { content: "✓"; position: absolute; left: 0; font-weight: 700; color: var(--c); }

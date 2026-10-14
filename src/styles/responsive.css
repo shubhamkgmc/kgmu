@@ -1,0 +1,10 @@
+/* Small-screen layout */
+
+@media (max-width: 800px) {
+  .hero, .foot { grid-template-columns: 1fr; }
+  .bars li { grid-template-columns: 1fr 60px; }
+  .bar-name { grid-column: 1 / -1; }
+  .bar-track { grid-column: 1; }
+}
+
+@media (max-width: 800px) { .viz { grid-template-columns: 1fr; } }
