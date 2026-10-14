@@ -3,6 +3,8 @@ import { BarChart } from "../ui/BarChart";
 import { PieChart } from "../ui/PieChart";
 import { ModuleGrid } from "./ModuleGrid";
 import { TaskGroupGrid } from "./TaskGroupGrid";
+import { UpdateCards } from "./UpdateCards";
+import { LifecycleFlow } from "./LifecycleFlow";
 import type { Service } from "../../types";
 
 interface Props {
@@ -19,7 +21,10 @@ export function ServicePanel({ service: s, print = false }: Props) {
       id={print ? undefined : `panel-${s.id}`}
     >
       {s.featured ? (
-        <div className="banner">
+        <div className={s.tone ? `banner tone-${s.tone}` : "banner"}>
+          <span className="banner-icon" aria-hidden="true">
+            {s.icon}
+          </span>
           {s.badge && <span className="badge">{s.badge}</span>}
           <p>{s.summary}</p>
         </div>
@@ -33,10 +38,22 @@ export function ServicePanel({ service: s, print = false }: Props) {
           <ModuleGrid modules={s.modules} />
         </>
       )}
+      {s.lifecycle && (
+        <>
+          <h3>Email ID lifecycle</h3>
+          <LifecycleFlow steps={s.lifecycle} />
+        </>
+      )}
       {s.taskGroups && (
         <>
           <h3>Work done by the IT Cell</h3>
           <TaskGroupGrid groups={s.taskGroups} />
+        </>
+      )}
+      {s.updates && (
+        <>
+          <h3>{s.updatesTitle ?? "What we publish and keep updated"}</h3>
+          <UpdateCards items={s.updates} />
         </>
       )}
       {s.bars && (
@@ -50,8 +67,10 @@ export function ServicePanel({ service: s, print = false }: Props) {
       )}
       {s.points && (
         <ul className="points">
-          {s.points.map((p) => (
-            <li key={p}>{p}</li>
+          {s.points.map((p, i) => (
+            <li key={p} style={{ ["--i" as string]: i }}>
+              {p}
+            </li>
           ))}
         </ul>
       )}

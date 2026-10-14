@@ -1,6 +1,6 @@
 /* NextGen eHospital panel: banner, module tiles, work groups */
 
-.banner { position: relative; overflow: hidden; border-radius: 14px; padding: 1.6rem 1.8rem; margin-bottom: 1.2rem; color: #fff; background: linear-gradient(120deg, #073b4c 0%, #0b6e6e 55%, #3b6ea5 100%); }
+.banner { padding-right: 8rem !important; position: relative; overflow: hidden; border-radius: 14px; padding: 1.6rem 1.8rem; margin-bottom: 1.2rem; color: #fff; background: linear-gradient(120deg, #073b4c 0%, #0b6e6e 55%, #3b6ea5 100%); }
 .banner::before, .banner::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; }
 .banner::before { width: 260px; height: 260px; right: -60px; top: -90px; background: radial-gradient(circle, rgba(240, 180, 41, .55), transparent 70%); animation: drift 9s ease-in-out infinite alternate; }
 .banner::after { width: 200px; height: 200px; right: 140px; bottom: -110px; background: radial-gradient(circle, rgba(255, 255, 255, .25), transparent 70%); animation: drift 12s ease-in-out infinite alternate-reverse; }
@@ -28,3 +28,12 @@
 .task-group ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .45rem; }
 .task-group li { position: relative; padding-left: 1.4rem; }
 .task-group li::before { content: "✓"; position: absolute; left: 0; font-weight: 700; color: var(--c); }
+
+.banner-icon { position: absolute; z-index: 1; right: 1.8rem; top: 50%; transform: translateY(-50%); font-size: 4.2rem; line-height: 1; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .3)); animation: float 4s ease-in-out infinite alternate; }
+@keyframes float { to { transform: translateY(-62%); } }
+.tone-indigo { background: linear-gradient(120deg, #1e2a5a 0%, #3b4cb8 60%, #6a8cff 100%); }
+.tone-violet { background: linear-gradient(120deg, #2d1b4e 0%, #6a3fb5 60%, #b07be0 100%); }
+.tone-green { background: linear-gradient(120deg, #0b3d2e 0%, #1c7a4a 60%, #6bbf59 100%); }
+.tone-amber { background: linear-gradient(120deg, #5a3a00 0%, #c27c00 60%, #f0b429 100%); }
+.tone-rose { background: linear-gradient(120deg, #4a1226 0%, #b3345a 60%, #ee7a8f 100%); }
+@media (max-width: 600px) { .banner { padding-right: 1.8rem !important; } .banner-icon { position: static; display: block; transform: none; margin-bottom: .5rem; font-size: 2.6rem; animation: none; } }

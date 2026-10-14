@@ -1,7 +1,8 @@
 import { COVER_IMAGE, glance } from "../../data";
-import { printPage } from "../../utils/print";
+import { usePdfExport } from "../../context/PdfExportContext";
 
 export function Hero() {
+  const { openDialog } = usePdfExport();
   return (
     <section className="hero">
       <img className="hero-bg" src={COVER_IMAGE} alt="KGMU main building" />
@@ -16,7 +17,7 @@ export function Hero() {
           <a className="btn" href="#work">
             See our work
           </a>
-          <button className="btn ghost" onClick={printPage}>
+          <button className="btn ghost" onClick={openDialog}>
             Download as PDF (A4)
           </button>
         </div>

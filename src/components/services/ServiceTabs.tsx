@@ -18,6 +18,7 @@ export function ServiceTabs({ services, activeId, onChange }: Props) {
           className={s.id === activeId ? "tab on" : "tab"}
           onClick={() => onChange(s.id)}
         >
+          <span aria-hidden="true">{s.icon}</span>
           {s.name}
         </button>
       ))}

@@ -1,0 +1,10 @@
+/* Lifecycle flow: step chips joined by arrows */
+
+.flow { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.flow-step { display: flex; align-items: center; gap: .7rem; padding: .7rem 1.3rem .7rem .8rem; background: var(--card); border: 1px solid var(--line); border-radius: 999px; animation: rise .5s ease both; animation-delay: calc(var(--i) * 120ms); transition: transform .25s ease, box-shadow .25s ease; }
+.flow-step:hover { transform: translateY(-3px); box-shadow: 0 6px 14px rgba(0, 0, 0, .12); }
+.flow-icon { width: 40px; height: 40px; display: grid; place-items: center; font-size: 1.2rem; border-radius: 50%; background: linear-gradient(135deg, var(--teal-soft), var(--card)); border: 1px solid var(--line); }
+.flow-label { font: 700 1.05rem "Familjen Grotesk", sans-serif; }
+.flow-step + .flow-step { margin-left: 1.6rem; position: relative; }
+.flow-step + .flow-step::before { content: "→"; position: absolute; left: -1.7rem; top: 50%; transform: translateY(-52%); font-size: 1.3rem; font-weight: 700; color: var(--teal); }
+@media print { .flow-step { break-inside: avoid; } }

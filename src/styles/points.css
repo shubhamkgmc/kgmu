@@ -1,0 +1,7 @@
+/* Bullet points shown as cards with a check badge */
+
+.points { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: .8rem; }
+.points li { position: relative; margin: 0; padding: .85rem 1rem .85rem 3.4rem; background: var(--card); border: 1px solid var(--line); border-radius: 12px; animation: rise .5s ease both; animation-delay: calc(var(--i) * 70ms); transition: transform .25s ease, box-shadow .25s ease; }
+.points li::before { content: "✓"; position: absolute; left: .9rem; top: 50%; transform: translateY(-50%); width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; color: #fff; font-weight: 700; background: linear-gradient(135deg, var(--teal), #3b6ea5); }
+.points li:hover { transform: translateY(-3px); box-shadow: 0 8px 18px rgba(0, 0, 0, .12); }
+@media print { .points li { break-inside: avoid; } }

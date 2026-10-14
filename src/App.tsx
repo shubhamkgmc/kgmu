@@ -1,3 +1,5 @@
+import { PdfExportProvider } from "./context/PdfExportContext";
+import { PdfDialog } from "./components/pdf/PdfDialog";
 import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
 import { LogoBar } from "./components/layout/LogoBar";
@@ -11,7 +13,7 @@ import { TeamSection } from "./components/sections/TeamSection";
 
 export default function App() {
   return (
-    <>
+    <PdfExportProvider>
       <Header />
       <LogoBar />
       <main>
@@ -24,6 +26,7 @@ export default function App() {
         <TeamSection />
       </main>
       <Footer />
-    </>
+      <PdfDialog />
+    </PdfExportProvider>
   );
 }

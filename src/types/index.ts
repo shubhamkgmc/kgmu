@@ -15,13 +15,33 @@ export interface TaskGroup {
   items: string[];
 }
 
+export interface UpdateItem {
+  title: string;
+  icon: string;
+  note: string;
+}
+
+export interface LifecycleStep {
+  label: string;
+  icon: string;
+}
+
+export type Tone = "indigo" | "violet" | "green" | "amber" | "rose";
+
 export interface Service {
   id: string;
   name: string;
+  /** Emoji shown on the tab and in the banner. */
+  icon: string;
+  /** Banner colour; leave out for the default teal-blue. */
+  tone?: Tone;
   summary: string;
   stats?: StatItem[];
   modules?: string[];
   taskGroups?: TaskGroup[];
+  updatesTitle?: string;
+  updates?: UpdateItem[];
+  lifecycle?: LifecycleStep[];
   /** Gives the panel a gradient banner and the richer layout. */
   featured?: boolean;
   badge?: string;

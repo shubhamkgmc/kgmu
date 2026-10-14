@@ -7,10 +7,14 @@
 @import "./hero.css";
 @import "./services.css";
 @import "./nextgen.css";
+@import "./updates.css";
+@import "./points.css";
+@import "./flow.css";
 @import "./stats.css";
 @import "./charts.css";
 @import "./cards.css";
 @import "./team.css";
+@import "./pdf-dialog.css";
 @import "./footer.css";
 @import "./utility.css";
 @import "./responsive.css";
