@@ -1,8 +1,6 @@
 import { navLinks, org } from "../../data";
-import { usePdfExport } from "../../context/PdfExportContext";
 
 export function Header() {
-  const { openDialog } = usePdfExport();
   return (
     <header className="top">
       <div className="brand">
@@ -15,9 +13,6 @@ export function Header() {
             {l.label}
           </a>
         ))}
-        <button className="pdf-btn no-print" onClick={openDialog}>
-          Download PDF
-        </button>
       </nav>
     </header>
   );

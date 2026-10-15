@@ -20,9 +20,7 @@ nav a:hover { color: var(--primary); }
 
 .top nav a:hover { background: rgba(255,255,255,.18); color: #fff; }
 
-.pdf-btn { font: 600 .95rem "Source Sans 3", sans-serif; background: var(--accent); color: #1b1400; border: 0; border-radius: 6px; padding: .45rem 1rem; cursor: pointer; }
 
-.pdf-btn:hover { filter: brightness(1.08); }
 
 .logobar { background: #fff; padding: .9rem clamp(1rem, 5vw, 4rem); border-bottom: 1px solid var(--line); }
 .logobar img { display: block; height: 96px; width: auto; max-width: 100%; }
