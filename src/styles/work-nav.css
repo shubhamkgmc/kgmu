@@ -1,0 +1,25 @@
+/* "What we handle" navigation: swipeable strip on small screens, sticky sidebar on large ones */
+
+.work-count { margin: 0 0 .6rem; color: var(--muted); font-size: .9rem; font-weight: 600; }
+.work-main { min-width: 0; }
+
+/* small screens: one scrollable row with faded edges */
+.tabs { position: relative; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; scrollbar-width: none; margin: 0 -20px 1rem; padding: .3rem 20px .5rem; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%); }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { flex: 0 0 auto; white-space: nowrap; scroll-snap-align: center; }
+.tab span:first-child { font-size: 1.1rem; }
+
+.pager { display: flex; gap: .8rem; margin-top: 1.8rem; }
+.pager button { flex: 1 1 0; max-width: 50%; display: flex; flex-direction: column; gap: .15rem; padding: .7rem 1rem; text-align: left; font: 600 1rem "Source Sans 3", sans-serif; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 12px; cursor: pointer; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+.pager button small { color: var(--muted); font-weight: 400; }
+.pager button:hover { transform: translateY(-2px); border-color: var(--primary); box-shadow: 0 6px 14px rgba(0, 0, 0, .1); }
+.pager .next { margin-left: auto; text-align: right; }
+
+/* large screens: sticky sidebar on the left, content on the right */
+@media (min-width: 960px) {
+  .work-layout { display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 2rem; align-items: start; }
+  .tabs { flex-direction: column; overflow-x: visible; overflow-y: auto; scroll-snap-type: none; position: sticky; top: 5.5rem; max-height: calc(100vh - 7rem); margin: 0; padding: .4rem; background: var(--card); border: 1px solid var(--line); border-radius: 14px; -webkit-mask-image: none; mask-image: none; }
+  .tab { width: 100%; justify-content: flex-start; white-space: normal; text-align: left; padding: .6rem .8rem; border-color: transparent; background: transparent; border-radius: 10px; }
+  .tab:hover { background: var(--primary-soft); transform: none; box-shadow: none; }
+  .tab.on { background: var(--primary); color: var(--paper); }
+}

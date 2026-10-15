@@ -14,8 +14,8 @@ export const navLinks: NavLink[] = [
 
 export const glance: GlanceItem[] = [
   { label: "Wi-Fi access points", value: "600+" },
-  { label: "LAN ports", value: "5,500+" },
-  { label: "IP CCTV cameras", value: "300" },
+  { label: "LAN ports", value: "7,000+" },
+  { label: "IP CCTV cameras", value: "600+" },
   { label: "IT support", value: "24x7", highlight: true },
 ];
 

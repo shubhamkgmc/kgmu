@@ -19,6 +19,7 @@ export function ServicePanel({ service: s, print = false }: Props) {
       className={s.featured ? "panel featured" : "panel"}
       role={print ? undefined : "tabpanel"}
       id={print ? undefined : `panel-${s.id}`}
+      aria-labelledby={print ? undefined : `tab-${s.id}`}
     >
       {s.featured ? (
         <div className={s.tone ? `banner tone-${s.tone}` : "banner"}>

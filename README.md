@@ -17,7 +17,7 @@ All figures come from https://kgmu.org/it_infrastructure.php and live in `src/da
       components/
         ui/                      Section, Stat, StatGrid, BarChart, PieChart, Chips
         layout/                  Header, Footer
-        services/                ServiceTabs, ServicePanel
+        services/                ServiceTabs, ServicePanel, ServicePager (+ banner, cards, flow pieces)
         digital/                 EserviceCard
         team/                    MemberCard
         pdf/                     PdfDialog (choose sections for the PDF)
@@ -41,3 +41,7 @@ The header logo is the static file `public/kgmu-logo.png`. Replace that file to 
 ## Theme colours
 
 Colours are taken from the KGMU logo: blue `#205098`, gold `#b8902e`, red `#b82030`. They are defined as variables in `src/styles/variables.css` (`--primary`, `--accent`, plus dark-mode values). Banner gradients are in `src/styles/nextgen.css`.
+
+## Browser tab icon
+
+The tab icon is the KGMU emblem cut from the logo: `public/favicon.png`, `favicon.ico` and `apple-touch-icon.png`. Replace those files to change it. The tab title is set in `index.html`.

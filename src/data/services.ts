@@ -13,15 +13,16 @@ export const services: Service[] = [
     summary:
       "LAN and Wi-Fi in every building on campus: faculty residences, hostels, offices, patient areas, teaching blocks and the library. Distant units are linked through a central data centre.",
     stats: [
-      { label: "Managed access switches", value: 240 },
-      { label: "LAN ports", value: 5500, suffix: "+" },
+      { label: "Managed access switches", value: 350 },
+      { label: "LAN ports", value: 7000, suffix: "+" },
       { label: "Wi-Fi access points", value: 600, suffix: "+" },
-      { label: "Internet lines", value: 2 },
+      { label: "Internet lines", value: 3 },
     ],
     barsTitle: "Internet capacity by line (Gbps)",
     bars: [
-      { label: "BSNL lease line", value: 1 },
-      { label: "NKN-NIC (upgraded)", value: 1 },
+      { label: "Jio", value: 2 },
+      { label: "BSNL", value: 1 },
+      { label: "PGCIL", value: 1 },
     ],
   },
   {
@@ -35,8 +36,8 @@ export const services: Service[] = [
       "A central appointment number with parallel lines helps patients who cannot use the online portal. An SMS service is available for those who cannot call.",
     stats: [
       { label: "Parallel phone lines", value: 30 },
-      { label: "IVRS intercoms", value: 900, suffix: "+" },
-      { label: "VoIP intercoms", value: 100, suffix: "+" },
+      { label: "IVRS intercoms", value: 1300, suffix: "+" },
+      { label: "VoIP intercoms", value: 150, suffix: "+" },
       { label: "Patients on e-Hospital", value: 50, suffix: " lakh+" },
     ],
     points: [
@@ -56,18 +57,18 @@ export const services: Service[] = [
     summary:
       "The IT Cell runs and monitors the network, security and communication devices spread across the campus through a facility management system.",
     stats: [
-      { label: "IP CCTV cameras", value: 300 },
+      { label: "IP CCTV cameras", value: 600, suffix: "+" },
       { label: "Wi-Fi access points", value: 600, suffix: "+" },
-      { label: "Managed switches", value: 240 },
+      { label: "Managed switches", value: 350 },
       { label: "Connected outside units", value: 6 },
     ],
     barsTitle: "Devices in service",
     bars: [
-      { label: "IVRS intercoms", value: 900 },
-      { label: "IP CCTV cameras", value: 300 },
+      { label: "IVRS intercoms", value: 1300 },
+      { label: "IP CCTV cameras", value: 600 },
       { label: "Wi-Fi access points", value: 600 },
-      { label: "Managed switches", value: 240 },
-      { label: "VoIP intercoms", value: 100 },
+      { label: "Managed switches", value: 350 },
+      { label: "VoIP intercoms", value: 150 },
     ],
   },
   {
@@ -232,6 +233,39 @@ export const services: Service[] = [
       { title: "Property returns", icon: "🏠", note: "Annual property return filing" },
     ],
     link: { label: "Open Manav Sampada", href: "http://ehrms.upsdc.gov.in" },
+  },
+  {
+    id: "biometric",
+    name: "Biometric attendance",
+    icon: "🖐️",
+    tone: "green",
+    featured: true,
+    badge: "Attendance systems",
+    summary:
+      "The IT Cell runs biometric attendance for employees, students and staff, and looks after the biometric machines.",
+    updatesTitle: "What the IT Cell manages",
+    updates: [
+      { title: "Employee attendance", icon: "🧑‍💼", note: "Biometric attendance for employees" },
+      { title: "Student attendance", icon: "🎓", note: "Biometric attendance for students" },
+      { title: "Staff attendance", icon: "👥", note: "Biometric attendance for staff" },
+      { title: "Biometric machine management", icon: "⚙️", note: "Biometric machines kept installed and working" },
+    ],
+  },
+  {
+    id: "billinghr",
+    name: "HR for billing counters",
+    icon: "🧾",
+    tone: "amber",
+    featured: true,
+    badge: "Hospital billing counters",
+    summary:
+      "The IT Cell supports human resource management for the billing counters across the hospital.",
+    updatesTitle: "What the IT Cell manages",
+    updates: [
+      { title: "Counters across the hospital", icon: "🏥", note: "Billing counters in every hospital area covered" },
+      { title: "Counter staff management", icon: "👥", note: "Staff posted at each billing counter" },
+      { title: "Counter mapping", icon: "🗺️", note: "Staff and users mapped to their counters" },
+    ],
   },
   {
     id: "healthcard",
