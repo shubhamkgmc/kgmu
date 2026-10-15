@@ -28,6 +28,13 @@ export interface LifecycleStep {
 
 export type Tone = "teal" | "violet" | "green" | "amber" | "rose";
 
+export interface PortalLink {
+  title: string;
+  label: string;
+  href: string;
+  note: string;
+}
+
 export interface Service {
   id: string;
   name: string;
@@ -49,6 +56,8 @@ export interface Service {
   bars?: ChartRow[];
   points?: string[];
   link?: { label: string; href: string };
+  /** An internal portal shown as its own card, with a note about where it works. */
+  portal?: PortalLink;
 }
 
 export interface Eservice {
@@ -86,4 +95,10 @@ export interface Member {
   group: string;
   phone?: string;
   email?: string;
+}
+
+export interface ContactLine {
+  text: string;
+  /** Optional link, e.g. tel: or mailto:. */
+  href?: string;
 }

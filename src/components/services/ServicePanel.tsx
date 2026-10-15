@@ -5,6 +5,7 @@ import { ModuleGrid } from "./ModuleGrid";
 import { TaskGroupGrid } from "./TaskGroupGrid";
 import { UpdateCards } from "./UpdateCards";
 import { LifecycleFlow } from "./LifecycleFlow";
+import { PortalCard } from "./PortalCard";
 import type { Service } from "../../types";
 
 interface Props {
@@ -75,6 +76,7 @@ export function ServicePanel({ service: s, print = false }: Props) {
           ))}
         </ul>
       )}
+      {s.portal && <PortalCard portal={s.portal} />}
       {s.link && (
         <a className="card-link" href={s.link.href} target="_blank" rel="noreferrer">
           {s.link.label} ↗

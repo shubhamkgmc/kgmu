@@ -1,4 +1,4 @@
-import type { GlanceItem, NavLink } from "../types";
+import type { ContactLine, GlanceItem, NavLink } from "../types";
 
 // KGMU logo, a static file in /public (public/kgmu-logo.png). Replace that file to change the logo.
 export const logoSrc = "/kgmu-logo.png";
@@ -19,9 +19,12 @@ export const glance: GlanceItem[] = [
   { label: "IT support", value: "24x7", highlight: true },
 ];
 
-export const contactLines: string[] = [
-  "OPD appointments: 0522-2258880, 0522-3539333",
-  "Emergency ambulance: +91 94530 04209",
-  "Email: info@kgmcindia.edu",
-  "Shah Mina Rd, Chowk, Lucknow 226003",
+export const helpdeskNumber = "6307939619";
+
+export const contactLines: ContactLine[] = [
+  { text: `IT helpdesk support: ${helpdeskNumber}`, href: `tel:${helpdeskNumber}` },
+  { text: "OPD appointments: 0522-2258880, 0522-3539333" },
+  { text: "Emergency ambulance: +91 94530 04209" },
+  { text: "Email: info@kgmcindia.edu", href: "mailto:info@kgmcindia.edu" },
+  { text: "Shah Mina Rd, Chowk, Lucknow 226003" },
 ];

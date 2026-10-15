@@ -7,3 +7,6 @@
 .foot ul { list-style: none; padding: 0; margin: 0; }
 
 .foot li { padding: .3rem 0; }
+
+.foot a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.foot a:hover { color: var(--accent); }

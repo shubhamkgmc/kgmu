@@ -14,9 +14,13 @@ export const services: Service[] = [
       "LAN and Wi-Fi in every building on campus: faculty residences, hostels, offices, patient areas, teaching blocks and the library. Distant units are linked through a central data centre.",
     stats: [
       { label: "Managed access switches", value: 350 },
+      { label: "Distribution switches", value: 9 },
+      { label: "Core switches", value: 2 },
+      { label: "Firewalls", value: 2 },
       { label: "LAN ports", value: 7000, suffix: "+" },
       { label: "Wi-Fi access points", value: 600, suffix: "+" },
       { label: "Internet lines", value: 3 },
+      { label: "Servers (data centre)", value: 7 },
     ],
     barsTitle: "Internet capacity by line (Gbps)",
     bars: [
@@ -61,6 +65,7 @@ export const services: Service[] = [
       { label: "Wi-Fi access points", value: 600, suffix: "+" },
       { label: "Managed switches", value: 350 },
       { label: "Connected outside units", value: 6 },
+      { label: "Kiosk systems", value: 10 },
     ],
     barsTitle: "Devices in service",
     bars: [
@@ -269,20 +274,28 @@ export const services: Service[] = [
   },
   {
     id: "healthcard",
-    name: "Health cards",
+    name: "Employee health cards",
     icon: "🪪",
     tone: "rose",
     featured: true,
-    badge: "Patient identity",
+    badge: "Health card management",
     summary:
-      "Patient health cards are created at registration so every visit, report and bill is tied to one patient record in the e-Hospital system.",
+      "The IT Cell manages health cards for the university's employees and related groups, and creates the UHID that links each card holder to their records.",
     // To show numbers here, add: stats: [{ label: "Cards issued", value: 0 }]
-    points: [
-      "Card generated at the registration counter from the patient's e-Hospital (HMIS) record",
-      "Unique patient number on the card links OPD visits, lab reports and billing",
-      "Reprint and correction of cards that are lost or carry wrong details",
-      "Card printers and registration counters kept running by the IT Cell",
+    updatesTitle: "Health cards we manage",
+    updates: [
+      { title: "Regular employees", icon: "🧑‍💼", note: "Health cards for regular employees" },
+      { title: "Students", icon: "🎓", note: "Health cards for students" },
+      { title: "Interns", icon: "🧑‍⚕️", note: "Health cards for interns" },
+      { title: "Doctors", icon: "👨‍⚕️", note: "Health cards for doctors" },
+      { title: "UHID creation", icon: "🆔", note: "Unique Health ID created for each card holder" },
     ],
+    portal: {
+      title: "Independent portal for health card management",
+      label: "Open portal",
+      href: "https://172.16.26.56/",
+      note: "Works only inside the KGMU campus network",
+    },
   },
   {
     id: "idcard",
@@ -300,6 +313,12 @@ export const services: Service[] = [
       "Replacement and renewal when a card is lost or details change",
       "Card printers, photo and data-entry stations maintained by the IT Cell",
     ],
+    portal: {
+      title: "Independent portal for identity card management",
+      label: "Open portal",
+      href: "https://172.16.26.56/",
+      note: "Works only inside the KGMU campus network",
+    },
   },
   {
     id: "tickets",
@@ -317,7 +336,7 @@ export const services: Service[] = [
       { label: "Daily log reviews", value: 1, suffix: " / day" },
     ],
     points: [
-      "Call the helpdesk on its dedicated mobile number for hardware, software or network problems",
+      "Call the IT helpdesk on 6307939619 for hardware, software or network problems",
       "Post the complaint in the WhatsApp group",
       "An in-house application tracks every complaint log",
       "Daily complaint logs are reviewed for any lapse",
