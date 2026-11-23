@@ -6,6 +6,7 @@ import { TaskGroupGrid } from "./TaskGroupGrid";
 import { UpdateCards } from "./UpdateCards";
 import { LifecycleFlow } from "./LifecycleFlow";
 import { PortalCard } from "./PortalCard";
+import { TrainingVideos } from "./TrainingVideos";
 import type { Service } from "../../types";
 
 interface Props {
@@ -52,6 +53,7 @@ export function ServicePanel({ service: s, print = false }: Props) {
           <TaskGroupGrid groups={s.taskGroups} />
         </>
       )}
+      {s.id === "nextgen" && !print && <TrainingVideos />}
       {s.updates && (
         <>
           <h3>{s.updatesTitle ?? "What we publish and keep updated"}</h3>

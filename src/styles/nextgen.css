@@ -29,6 +29,30 @@
 .task-group li { position: relative; padding-left: 1.4rem; }
 .task-group li::before { content: "✓"; position: absolute; left: 0; font-weight: 700; color: var(--c); }
 
+.training-videos-intro { margin: -.25rem 0 1rem; color: var(--muted); }
+.training-module-accordion { margin: .75rem 0; overflow: hidden; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+.training-module-accordion[open] { border-color: var(--primary); box-shadow: 0 6px 18px rgba(0, 0, 0, .07); }
+.training-video-module-summary { display: flex; align-items: center; gap: .75rem; padding: .9rem 1rem; cursor: pointer; list-style: none; }
+.training-video-module-summary::-webkit-details-marker { display: none; }
+.training-video-module-summary::after { content: "+"; margin-left: auto; color: var(--primary); font-size: 1.4rem; line-height: 1; }
+.training-module-accordion[open] .training-video-module-summary::after { content: "−"; }
+.training-video-module-summary:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
+.training-video-module-number { display: grid; flex: 0 0 2.4rem; width: 2.4rem; height: 2.4rem; place-items: center; border-radius: 8px; background: var(--primary-soft); color: var(--primary); font-size: .85rem; font-weight: 700; }
+.training-video-module-name { font: 700 1.1rem "Familjen Grotesk", sans-serif; }
+.training-video-count { color: var(--muted); font-size: .9rem; }
+.training-videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 1rem; padding: 0 1rem 1rem; }
+.training-video-section { margin-top: 1.25rem; }
+.training-video-section .training-video-module { margin: 0 0 .75rem; font: 700 1.15rem "Familjen Grotesk", sans-serif; }
+.training-video-section .training-videos { padding: 0; }
+.training-video { min-width: 0; padding: 1rem; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+.training-video-topic { min-height: 4.25rem; margin-bottom: .75rem; }
+.training-video-topic-label { display: block; margin-bottom: .25rem; color: var(--primary); font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.training-video h5 { margin: 0; font: 700 1.05rem "Familjen Grotesk", sans-serif; }
+.training-video video { display: block; width: 100%; max-height: 360px; border-radius: 8px; background: #000; }
+.training-video iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 8px; background: #000; }
+.training-video-error { margin: 0; color: #a3212a; }
+.training-videos-empty { margin: 0; padding: 1rem; color: var(--muted); background: var(--card); border: 1px dashed var(--line); border-radius: 12px; }
+
 .banner-icon { position: absolute; z-index: 1; right: 1.8rem; top: 50%; transform: translateY(-50%); font-size: 4.2rem; line-height: 1; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .3)); animation: float 4s ease-in-out infinite alternate; }
 @keyframes float { to { transform: translateY(-62%); } }
 .tone-teal { background: linear-gradient(120deg, #0b3f45 0%, #1b7f86 60%, #5cc7c0 100%); }
